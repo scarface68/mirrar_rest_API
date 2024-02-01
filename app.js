@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/ecommerce");
+mongoose.connect(process.env.MONGODB_URL);
 
 const PORT = 5000 || process.env.PORT;
 
